@@ -1,0 +1,12 @@
+
+<button (click)="openSheet(mySheet)">Open</button>
+
+<div>{{output}}</div>
+
+<ng-template #mySheet let-context>
+  <ul class="sheet-list">
+    <li class="sheet-list-item" (click)="context.dismiss('test123')">Test 123</li>
+    <li class="sheet-list-item" (click)="context.dismiss('test456')">Test 456</li>
+    <li class="sheet-list-item" (click)="context.dismiss('test789')">Test 789</li>
+  </ul>
+</ng-template>
